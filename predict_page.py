@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
+import pandas as pd
 
 
 def load_model():
@@ -22,31 +23,6 @@ def show_predict_page():
     st.title("Vehicle Price Prediction")
 
     st.write("""### We need some information to predict the price of the vehicle""")
-
-    brands = (
-        "Audi",
-        "BMW",
-        "Ford",
-        "GWM",
-        "Holden",
-        "Honda",
-        "Hyundai",
-        "Isuzu",
-        "Jeep",
-        "Kia",
-        "Land",
-        "Lexus",
-        "Mazda",
-        "Mercedes-Benz",
-        "MG",
-        "Mitsubishi",
-        "Nissan",
-        "Renault",
-        "Subaru",
-        "Suzuki",
-        "Toyota",
-        "Volkswagen"    
-    )
 
     body_types = (
         "Commercial",
@@ -71,17 +47,15 @@ def show_predict_page():
         "WA"
     )
 
-    models = (
-        "Navara",
-        "Convertible",
-        "Coupe",
-        "Hatchback",
-        "People Mover",
-        "Sedan",
-        "SUV",
-        "Ute / Tray",       
-        "Wagon"
-    )
+    # Getting values for organise brand and model menus
+    car_data = pd.read_csv("unique_brands.csv")
+
+    df = pd.DataFrame(car_data)
+
+    def filter_models_by_brand(selected_brand):
+        # Filter models based on the selected brand
+        filtered_models = df[df['Brand'] == selected_brand]['Model'].unique()
+        return filtered_models
 
     used_new = (
         "USED",
@@ -93,21 +67,27 @@ def show_predict_page():
         "Manual"
     )
 
-    brand = st.selectbox("Brand", brands)
+    selected_brand = st.selectbox("Select Brand", df['Brand'].unique())
+
+    # Use the selected brand to filter models
+    filtered_models = filter_models_by_brand(selected_brand)
+
+    # Selectbox for choosing the model (filtered based on the selected brand)
+    selected_model = st.selectbox("Select Model", filtered_models)
+
     body_type = st.selectbox("Body type", body_types)
     state = st.selectbox("State", states)
-    model = st.selectbox("Model", models)
     used = st.selectbox("Used or New type", used_new)
     transmission = st.selectbox("Transmission", transmissions)
 
-    litres = st.slider("Litres of motor", 0.7, 6.8, 1.3)
+    litres = st.slider("Litres of motor", min_value=0.7, max_value=6.8, value=1.3, step=0.1)
 
-    kilometres = st.number_input("Enter odometer value:", min_value=0, step=1)
-    year = st.number_input("Enter the year of manufacture:", min_value=1900, max_value=2050, step=1)
+    kilometres = st.number_input("Enter odometer value:", min_value=0, step=1, value=150000)
+    year = st.number_input("Enter the year of manufacture:", min_value=1900, max_value=2050, step=1, value=2010)
 
     ok = st.button("Calculate Vehicle Price")
     if ok:
-        X = np.array([[brand, year, model, used, transmission, kilometres, body_type, state, litres]])
+        X = np.array([[selected_brand, year, selected_model, used, transmission, kilometres, body_type, state, litres]])
         X[:, 0] = le_brand.transform(X[:,0])
         X[:, 2] = le_model.transform(X[:,2])
         X[:, 3] = le_used.transform(X[:,3])
