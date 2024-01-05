@@ -1,5 +1,5 @@
 # Ignore specific files
-file_to_ignore.txt
+#file_to_ignore.txt
 
 # Ignore all files with a certain extension
 *.gitignore
