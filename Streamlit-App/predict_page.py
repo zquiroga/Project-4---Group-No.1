@@ -91,14 +91,14 @@ def show_predict_page():
     used = st.selectbox("Used or New type", used_new)
     transmission = st.selectbox("Transmission", transmissions)
 
-    litres = st.slider("Litres of motor", min_value=0.7, max_value=6.8, value=1.3, step=0.1)
+    litres = st.slider("Engine", min_value=0.7, max_value=6.8, value=1.3, step=0.1)
 
     kilometres = st.number_input("Enter odometer value:", min_value=0, step=1, value=150000)
     year = st.number_input("Enter the year of manufacture:", min_value=1900, max_value=2050, step=1, value=2010)
 
     ok = st.button("Calculate Vehicle Price")
     if ok:
-        X = np.array([[selected_brand, year, selected_model, used, transmission, kilometres, body_type, state, litres]])
+        X = np.array([[selected_brand, year, selected_model, used, transmission, kilometres, state, litres]])
         X[:, 0] = le_brand.transform(X[:,0])
         X[:, 2] = le_model.transform(X[:,2])
         X[:, 3] = le_used.transform(X[:,3])
