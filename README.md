@@ -54,8 +54,9 @@ Allow car buyers to validate the fairness of the price of a car they are aiming 
    - [Main website](Streamlit-App/app.py)  
      The main root of the website is to select between the "Predict" and "Explore" pages.
    - [Predict page](Streamlit-App/predict_page.py)  
-     Page for data input from users to predict vehicle prices
-     
+     Page for data input from users to predict vehicle prices.
+   - [Explore page](Streamlit-App/explore_page.py)  
+     Page with demographics of the dataset used.     
 - Pickle-files Directory:
    - [Random Forest Regressor model saved](Pickle-files/random_model_steps.pkl)  
    - [Decision Tree Regressor model saved](Pickle-files/saved_steps.pkl)  
