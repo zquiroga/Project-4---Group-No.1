@@ -65,13 +65,20 @@ Project4 - UWA/edX Data Analytics Bootcamp
 
 ## Repository Structure
 - Root Directory: Contains the main application files like index.html, Jupyter notebooks (01_ASX_Top10_Dataframes_Historic.ipynb, etc.), and the Flask script app_solution.
-- Images Directory: Includes assets like ASX_top_ten_ERD.jpg.
-- Static/js Directory: Stores plot.js and styles.css.
+- Streamlit App Directory:
+   - [Main website](Streamlit-App/app.py)  
+     The main root of the website is to select between the "Predict" and "Explore" pages.
+   - [Predict page](Streamlit-App/predict_page.py)  
+     Page for data input from users to predict vehicle prices
+     
+- Pickle-files Directory:
+   - [Random Forest Regressor model saved](Pickle-files/random_model_steps.pkl)  
+   - [Decision Tree Regressor model saved](Pickle-files/saved_steps.pkl)  
 - Resources Directory:
-   - [Australian Vehicle Prices.csv](Resources/Australian Vehicle Prices.csv)
+   - [Australian Vehicle Prices.csv](Resources/Australian_Vehicle_Prices.csv)  
      Original dataset found in Kaggle. 
-   - [Brands and models.csv](Resources/unique_brands.csv)
-      - Table created to filter car models by brand on the Streamlit app.
+   - [Brands and models.csv](Resources/unique_brands.csv)  
+     Table created to filter car models by brand on the Streamlit app.
   
 ## Data Sources and Copyright  
 ### Data Sources
