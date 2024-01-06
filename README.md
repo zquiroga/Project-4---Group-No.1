@@ -47,6 +47,8 @@ Allow car buyers to validate the fairness of the price of a car they are aiming 
      Original dataset found in Kaggle. 
    - [Brands and models.csv](Resources/unique_brands.csv)  
      Table created to filter car models by brand on the Streamlit app.
+   - [Data for graphs.csv](Resources/cleaned_dataset.csv)
+     Table created to generate graphs on the Explore page.
   
 ## Data Sources and Copyright  
 ### Data Sources
