@@ -23,6 +23,11 @@ Project4 - UWA/edX Data Analytics Bootcamp
 ### Overview
 Using a dataset with prices of vehicles sold in Australia since 2023 found in Kaggle, we aimed to create a website that allowed users to search for specific car details and get an estimated price for the car. Behind this website, we are running a Decision Tree Regressor model and a Random Forest Regressor model from the Scikit Learn Python library that predicts car prices depending on the historical prices of cars sold. Additionally, the website shows insights into the dataset used as a reference for the user regarding the truthfulness of the price predicted depending on their specific context.
 
+This is a team effort with the following contributors:
+
+- [Zonia Quiroga](https://github.com/zquiroga)
+- [Julian Ravelo](https://github.com/JulianRavelo)
+
 ### Objective
 Allow car buyers to validate the fairness of the price of a car they are aiming to buy  based on historical prices of cars sold in 2023.
 
