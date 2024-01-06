@@ -88,8 +88,10 @@ Project4 - UWA/edX Data Analytics Bootcamp
 ### Copyright Notice
 The data used on this web application is the property of the respective data providers. The information provided by this application is for informational/educational purposes only and is not intended for trading advice. We do not hold any responsibility for financial decisions made based on the information provided by our website.  
 
-## Conclusion
-
+## Conclusions
+- The Decision Tree Regressor model and the Random Forest Regressor model allowed us to predict vehicle prices based on a dataset with the latest information on car prices in Australia for 2023.  
+- Even though the predictions showed scores of 99% and 98% for both models respectively, the mean squared error is significantly different ($338 and $2053) and might be relevant when buying cars with a low budget (below $10,000).  
+- As shown on the [Data Engineering](Data-Engineering.ipynb) file, the main feature used by both models is the year of manufacture (almost 50%), followed by litres of the motor, kilometres, model and brand in that order. It is debatable as when buying a car in real life, features like "Used or New" or "Transmission" of the car tend to change the price of a car but they are not used by the models.
 
 ## References
 - https://github.com/patrickloeber/ml-app-salaryprediction
