@@ -5,11 +5,10 @@ Project4 - UWA/edX Data Analytics Bootcamp
 
 1. [Introduction](#introduction)
 2. [Features](#features)
-3. [Approach](#approach)
-4. [Repository Structure](#repository-structure)
-5. [Data Sources and Copyright](#data-sources-and-copyright)
-6. [Conclusion](#conclusion)
-7. [References](#references)
+3. [Repository Structure](#repository-structure)
+4. [Data Sources and Copyright](#data-sources-and-copyright)
+5. [Conclusion](#conclusion)
+6. [References](#references)
 
 ## Introduction
 
@@ -25,25 +24,8 @@ This is a team effort with the following contributors:
 Allow car buyers to validate the fairness of the price of a car they are aiming to buy  based on historical prices of cars sold in 2023.
 
 ## Features
-
-
-
-## Approach
-
-### Methodology
-
-
-
-
-
-### Structure
-
-
-
-## Coding 
-
-
-
+- **Predict:** Main page to allow users to input values of the possible car to buy and check the predictions of the model.
+- **Explore:** Graphs showing demographics of the dataset used.
 ## Repository Structure
 - Root Directory:
   - [Proposal](Proposal.pdf)
