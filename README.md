@@ -10,7 +10,7 @@ Project4 - UWA/edX Data Analytics Bootcamp
 3. [Approach](#approach)
    1. [Methodology](#methodology)
    2. [Structure](#structure)
-   3. [Scripts](#scripts)
+   3. [Coding](#coding)
 4. [Repository Structure](#repository-structure)
 5. [Data Sources and Copyright](#data-sources-and-copyright)
    1. [Data Sources](#data-sources)
@@ -18,30 +18,13 @@ Project4 - UWA/edX Data Analytics Bootcamp
 6. [Conclusion](#conclusion)
 7. [References](#references)
 
-
 ## Introduction
 
 ### Overview
-
-
+Using a dataset with prices of vehicles sold in Australia since 2023 found in Kaggle, we aimed to create a website that allowed users to search for specific car details and get an estimated price for the car. Behind this website, we are running a Decision Tree Regressor model and a Random Forest Regressor model from the Scikit Learn Python library that predicts car prices depending on the historical prices of cars sold. Additionally, the website shows insights into the dataset used as a reference for the user regarding the truthfulness of the price predicted depending on their specific context.
 
 ### Objective
-
-
-## Getting Started
-
-### Prerequisites
-
-
-
-### Installation
-
-
-
-### Running the Application
-
-
-
+Allow car buyers to validate the fairness of the price of a car they are aiming to buy  based on historical prices of cars sold in 2023.
 
 ## Features
 
@@ -64,7 +47,11 @@ Project4 - UWA/edX Data Analytics Bootcamp
 
 
 ## Repository Structure
-- Root Directory: Contains the main application files like index.html, Jupyter notebooks (01_ASX_Top10_Dataframes_Historic.ipynb, etc.), and the Flask script app_solution.
+- Root Directory:
+  - [Proposal](Proposal.pdf)
+    Proposal of the project.
+  - [Data Engineering](Data-Engineering.ipynb)
+    Jupyter notebook with the data cleaning and all insights of the models used.
 - Streamlit App Directory:
    - [Main website](Streamlit-App/app.py)  
      The main root of the website is to select between the "Predict" and "Explore" pages.
