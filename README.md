@@ -4,17 +4,10 @@ Project4 - UWA/edX Data Analytics Bootcamp
 ## Table of Contents
 
 1. [Introduction](#introduction)
-   1. [Overview](#overview)
-   2. [Objective](#objective)
 2. [Features](#features)
 3. [Approach](#approach)
-   1. [Methodology](#methodology)
-   2. [Structure](#structure)
-   3. [Coding](#coding)
 4. [Repository Structure](#repository-structure)
 5. [Data Sources and Copyright](#data-sources-and-copyright)
-   1. [Data Sources](#data-sources)
-   2. [Copyright Notice](#copyright-notice)
 6. [Conclusion](#conclusion)
 7. [References](#references)
 
