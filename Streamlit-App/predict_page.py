@@ -1,17 +1,16 @@
 # Importing libraries
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 import pandas as pd
 
 # Creating functions for models
 # Function for Decision Tree Regressor Model
-def load_model():
-    with open('../Pickle-files/saved_steps.pkl', 'rb') as file:
-        data = pickle.load(file)
+def tree_model():
+    data = joblib.load('../Joblib-files/decision_tree_model_steps.joblib')
     return data
 
-data = load_model()
+data = tree_model()
 
 dec_tree_reg = data["model"]
 le_brand = data["le_brand"]
@@ -21,14 +20,13 @@ le_transmission = data["le_transmission"]
 le_state = data["le_state"]
 
 #Function for Random Forest Regressor Model
-def random_forest():
-   with open('../Pickle-files/random_model_steps.pkl', 'rb') as file:
-    data_1 = pickle.load(file)
-    return data_1
+def random_model():
+    data = joblib.load('../Joblib-files/random_model_steps.joblib')
+    return data
 
-data_1 = random_forest()
+data_1 = random_model()
 
-random_forest_reg = data_1["model"]
+random_model = data_1["model"]
 
 # Creating function to show the prediction page of the website
 def show_predict_page():
@@ -107,7 +105,7 @@ def show_predict_page():
         X = X.astype(float)
 
         y_pred = dec_tree_reg.predict(X)
-        y_pred_1 = random_forest_reg.predict(X)
+        y_pred_1 = random_model.predict(X)
         st.subheader(f"The estimated price of the vehicle using a Decision Tree Regressor Model is ${y_pred[0]:.2f}")
         st.text("For more information about this model, check this instructive video:")
         st.write('[Decision Tree Regression Model](https://www.youtube.com/watch?v=_wZ1Lo7bhGg&ab_channel=SuperMachineLearning)')
