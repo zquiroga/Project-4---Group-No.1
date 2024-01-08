@@ -109,6 +109,10 @@ def show_predict_page():
         y_pred = dec_tree_reg.predict(X)
         y_pred_1 = random_forest_reg.predict(X)
         st.subheader(f"The estimated price of the vehicle using a Decision Tree Regressor Model is ${y_pred[0]:.2f}")
+        st.text("For more information about this model, check this instructive video:")
+        st.write('[Decision Tree Regression Model](https://www.youtube.com/watch?v=_wZ1Lo7bhGg&ab_channel=SuperMachineLearning)')
         st.subheader(f"The estimated price of the vehicle using a Random Forest Regressor Model is ${y_pred_1[0]:.2f}")
+        st.text("For more information about this model, check this instructive video:")
+        st.write('[Random Forest Regressor Model](https://www.youtube.com/watch?v=X1MRbEnEq2sg)')
 
 show_predict_page()
